@@ -29,14 +29,14 @@
 
 @interface REMenuItemView : UIView
 
-@property (weak, readwrite, nonatomic) REMenu *menu;
-@property (weak, readwrite, nonatomic) UIView *separatorView;
-@property (strong, readwrite, nonatomic) UILabel *titleLabel;
-@property (strong, readwrite, nonatomic) UILabel *subtitleLabel;
-@property (strong, readwrite, nonatomic) UIImageView *imageView;
-@property (strong, readwrite, nonatomic) UILabel *badgeLabel;
-@property (strong, readwrite, nonatomic) REMenuItem *item;
+@property (weak, readwrite, nonatomic, nullable) REMenu *menu;
+@property (weak, readwrite, nonatomic, nullable) UIView *separatorView;
+@property (strong, readwrite, nonatomic, nonnull) UILabel *titleLabel;
+@property (strong, readwrite, nonatomic, nullable) UILabel *subtitleLabel;
+@property (strong, readwrite, nonatomic, nonnull) UIImageView *imageView;
+@property (strong, readwrite, nonatomic, nonnull) UILabel *badgeLabel;
+@property (strong, readwrite, nonatomic, nonnull) REMenuItem *item;
 
-- (id)initWithFrame:(CGRect)frame menu:(REMenu *)menu item:(REMenuItem*) item hasSubtitle:(BOOL)hasSubtitle;
+- (nonnull id)initWithFrame:(CGRect)frame menu:(nonnull REMenu *)menu item:(nonnull REMenuItem*) item hasSubtitle:(BOOL)hasSubtitle;
 
 @end

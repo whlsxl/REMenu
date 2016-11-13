@@ -99,7 +99,7 @@
     return self;
 }
 
-- (id)initWithItems:(NSArray *)items
+- (nonnull id)initWithItems:(nonnull NSArray *)items
 {
     self = [self init];
     if (self) {
@@ -108,7 +108,7 @@
     return self;
 }
 
-- (void)showFromRect:(CGRect)rect inView:(UIView *)view
+- (void)showFromRect:(CGRect)rect inView:(nonnull UIView *)view
 {
     if (self.isAnimating) {
         return;
@@ -300,12 +300,12 @@
     }
 }
 
-- (void)showInView:(UIView *)view
+- (void)showInView:(nonnull UIView *)view
 {
     [self showFromRect:view.bounds inView:view];
 }
 
-- (void)showFromNavigationController:(UINavigationController *)navigationController
+- (void)showFromNavigationController:(nonnull UINavigationController *)navigationController
 {
     if (self.isAnimating) {
         return;
@@ -320,7 +320,7 @@
     }
 }
 
-- (void)closeWithCompletion:(void (^)(void))completion
+- (void)closeWithCompletion:(nullable void (^)(void))completion
 {
     if (self.isAnimating) return;
     

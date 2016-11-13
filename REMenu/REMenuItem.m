@@ -33,7 +33,7 @@
 
 @implementation REMenuItem
 
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage action:(void (^)(REMenuItem *item))action
+- (nonnull id)initWithTitle:(nullable NSString *)title image:(nullable UIImage *)image highlightedImage:(nullable UIImage *)highlightedImage action:(nullable void (^)( REMenuItem * _Nonnull item))action
 {
     self = [super init];
     if (self) {
@@ -47,7 +47,7 @@
     return self;
 }
 
-- (id)initWithTitle:(NSString *)title subtitle:(NSString *)subtitle image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage action:(void (^)(REMenuItem *item))action
+- (nonnull id)initWithTitle:(nullable NSString *)title subtitle:(nullable NSString *)subtitle image:(nullable UIImage *)image highlightedImage:(nullable UIImage *)highlightedImage action:(nullable void (^)(REMenuItem * _Nonnull item))action
 {
     self = [super init];
     if (self) {
@@ -62,7 +62,7 @@
     return self;
 }
 
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image backgroundColor:(UIColor *)bgColor highlightedImage:(UIImage *)highlightedImage action:(void (^)(REMenuItem *item))action
+- (nonnull id)initWithTitle:(nullable NSString *)title image:(nullable UIImage *)image backgroundColor:(nullable UIColor *)bgColor highlightedImage:(nullable UIImage *)highlightedImage action:(nullable void (^)(REMenuItem * _Nonnull item))action
 {
     self = [super init];
     if (self) {
@@ -77,7 +77,7 @@
     return self;
 }
 
-- (id)initWithTitle:(NSString *)title subtitle:(NSString *)subtitle image:(UIImage *)image backgroundColor:(UIColor *)bgColor highlightedImage:(UIImage *)highlightedImage action:(void (^)(REMenuItem *item))action
+- (nonnull id)initWithTitle:(nullable NSString *)title subtitle:(nullable NSString *)subtitle image:(nullable UIImage *)image backgroundColor:(nullable UIColor *)bgColor highlightedImage:(nullable UIImage *)highlightedImage action:(nullable void (^)(REMenuItem * _Nonnull item))action
 {
     self = [super init];
     if (self) {
@@ -93,7 +93,7 @@
     return self;
 }
 
-- (id)initWithCustomView:(UIView *)customView action:(void (^)(REMenuItem *item))action
+- (nonnull id)initWithCustomView:(nullable UIView *)customView action:(nullable void (^)(REMenuItem * _Nonnull item))action
 {
     self = [super init];
     if (self) {
@@ -103,7 +103,7 @@
     return self;
 }
 
-- (id)initWithCustomView:(UIView *)customView
+- (nonnull id)initWithCustomView:(nullable UIView *)customView
 {
     self = [super init];
     if (self) {

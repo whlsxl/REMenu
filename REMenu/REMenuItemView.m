@@ -34,7 +34,7 @@
 
 @implementation REMenuItemView
 
-- (id)initWithFrame:(CGRect)frame menu:(REMenu *)menu item:(REMenuItem*) item hasSubtitle:(BOOL)hasSubtitle
+- (nonnull id)initWithFrame:(CGRect)frame menu:(nonnull REMenu *)menu item:(nonnull REMenuItem*) item hasSubtitle:(BOOL)hasSubtitle
 {
     self = [super initWithFrame:frame];
     if (self) {

@@ -27,45 +27,45 @@
 
 @interface REMenuItem : NSObject
 
-@property (strong, readwrite, nonatomic) UIColor *backgroundColor;
-@property (strong, readwrite, nonatomic) UIColor *separatorColor;
-@property (strong, readwrite, nonatomic) UIFont *font;
-@property (strong, readwrite, nonatomic) UIColor *textColor;
-@property (strong, readwrite, nonatomic) UIColor *textShadowColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *backgroundColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *separatorColor;
+@property (strong, readwrite, nonatomic, nullable) UIFont *font;
+@property (strong, readwrite, nonatomic, nullable) UIColor *textColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *textShadowColor;
 @property (assign, readwrite, nonatomic) CGSize textOffset;
 @property (assign, readwrite, nonatomic) CGSize textShadowOffset;
-@property (strong, readwrite, nonatomic) UIColor *highlightedBackgroundColor;
-@property (strong, readwrite, nonatomic) UIColor *highlightedSeparatorColor;
-@property (strong, readwrite, nonatomic) UIColor *highlightedTextColor;
-@property (strong, readwrite, nonatomic) UIColor *highlightedTextShadowColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *highlightedBackgroundColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *highlightedSeparatorColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *highlightedTextColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *highlightedTextShadowColor;
 @property (assign, readwrite, nonatomic) CGSize highlightedTextShadowOffset;
 @property (assign, readwrite, nonatomic) NSTextAlignment textAlignment;
-@property (strong, readwrite, nonatomic) UIFont *subtitleFont;
-@property (strong, readwrite, nonatomic) UIColor *subtitleTextColor;
-@property (strong, readwrite, nonatomic) UIColor *subtitleTextShadowColor;
+@property (strong, readwrite, nonatomic, nullable) UIFont *subtitleFont;
+@property (strong, readwrite, nonatomic, nullable) UIColor *subtitleTextColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *subtitleTextShadowColor;
 @property (assign, readwrite, nonatomic) CGSize subtitleTextOffset;
 @property (assign, readwrite, nonatomic) CGSize subtitleTextShadowOffset;
-@property (strong, readwrite, nonatomic) UIColor *subtitleHighlightedTextColor;
-@property (strong, readwrite, nonatomic) UIColor *subtitleHighlightedTextShadowColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *subtitleHighlightedTextColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *subtitleHighlightedTextShadowColor;
 @property (assign, readwrite, nonatomic) CGSize subtitleHighlightedTextShadowOffset;
 @property (assign, readwrite, nonatomic) NSTextAlignment subtitleTextAlignment;
-@property (strong, readwrite, nonatomic) UIColor *imageBackgroundColor;
+@property (strong, readwrite, nonatomic, nullable) UIColor *imageBackgroundColor;
 
-@property (copy, readwrite, nonatomic) NSString *title;
-@property (copy, readwrite, nonatomic) NSString *subtitle;
-@property (copy, readwrite, nonatomic) NSString *badge;
-@property (strong, readwrite, nonatomic) UIImage *image;
-@property (strong, readwrite, nonatomic) UIImage *highlightedImage;
-@property (copy, readwrite, nonatomic) void (^action)(REMenuItem *item);
+@property (copy, readwrite, nonatomic, nullable) NSString *title;
+@property (copy, readwrite, nonatomic, nullable) NSString *subtitle;
+@property (copy, readwrite, nonatomic, nullable) NSString *badge;
+@property (strong, readwrite, nonatomic, nullable) UIImage *image;
+@property (strong, readwrite, nonatomic, nullable) UIImage *highlightedImage;
+@property (copy, readwrite, nonatomic, nullable) void (^action)( REMenuItem * _Nonnull item);
 @property (assign, readwrite, nonatomic) NSInteger tag;
-@property (strong, readwrite, nonatomic) UIView *customView;
+@property (strong, readwrite, nonatomic, nullable) UIView *customView;
 
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage action:(void (^)(REMenuItem *item))action;
-- (id)initWithTitle:(NSString *)title subtitle:(NSString *)subtitle image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage action:(void (^)(REMenuItem *item))action;
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image backgroundColor:(UIColor *)bgColor highlightedImage:(UIImage *)highlightedImage action:(void (^)(REMenuItem *item))action;
-- (id)initWithTitle:(NSString *)title subtitle:(NSString *)subtitle image:(UIImage *)image backgroundColor:(UIColor *)bgColor highlightedImage:(UIImage *)highlightedImage action:(void (^)(REMenuItem *item))action;
-- (id)initWithCustomView:(UIView *)customView action:(void (^)(REMenuItem *item))action;
-- (id)initWithCustomView:(UIView *)customView;
+- (nonnull id)initWithTitle:(nullable NSString *)title image:(nullable UIImage *)image highlightedImage:(nullable UIImage *)highlightedImage action:(nullable void (^)( REMenuItem * _Nonnull item))action;
+- (nonnull id)initWithTitle:(nullable NSString *)title subtitle:(nullable NSString *)subtitle image:(nullable UIImage *)image highlightedImage:(nullable UIImage *)highlightedImage action:(nullable void (^)(REMenuItem * _Nonnull item))action;
+- (nonnull id)initWithTitle:(nullable NSString *)title image:(nullable UIImage *)image backgroundColor:(nullable UIColor *)bgColor highlightedImage:(nullable UIImage *)highlightedImage action:(nullable void (^)(REMenuItem * _Nonnull item))action;
+- (nonnull id)initWithTitle:(nullable NSString *)title subtitle:(nullable NSString *)subtitle image:(nullable UIImage *)image backgroundColor:(nullable UIColor *)bgColor highlightedImage:(nullable UIImage *)highlightedImage action:(nullable void (^)(REMenuItem * _Nonnull item))action;
+- (nonnull id)initWithCustomView:(nullable UIView *)customView action:(nullable void (^)(REMenuItem * _Nonnull item))action;
+- (nonnull id)initWithCustomView:(nullable UIView *)customView;
 - (void)setNeedsLayout;
 
 @end
